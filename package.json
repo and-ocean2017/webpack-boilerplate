@@ -1,0 +1,29 @@
+{
+  "name": "webpack_boilerplate",
+  "version": "1.0.0",
+  "description": "A simple but effective webpack boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config config/webpack.common.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/and-ocean2017/webpack-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "Praveen kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/and-ocean2017/webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/and-ocean2017/webpack-boilerplate#readme",
+  "devDependencies": {
+    "bootstrap": "^4.5.3",
+    "css-loader": "^5.0.1",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  }
+}

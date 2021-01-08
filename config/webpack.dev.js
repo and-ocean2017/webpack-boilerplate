@@ -7,7 +7,7 @@ module.exports = merge(common, {
   mode: "development",
 
   output: {
-    filename: "bundle.js",
+    filename: "[name]/[name].bundle.js",
     path: paths.build,
   },
 

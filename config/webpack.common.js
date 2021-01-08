@@ -1,15 +1,10 @@
-const loader = require("sass-loader");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 const paths = require("./paths");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
 
   entry: paths.src + "/index.js",
-
-  output: {
-    filename: "bundle.js",
-    path: paths.build,
-  },
 
   module: {
     rules: [
@@ -17,4 +12,10 @@ module.exports = {
       { test: /\.css$/, use: ["style-loader", "css-loader"] },
     ],
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
 };

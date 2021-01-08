@@ -2,9 +2,7 @@ import print from "./second";
 import "./index.scss";
 
 const obj = {
-  a: 10,
+  name: "Praveen kumar",
 };
-const clone = { ...obj };
 
-console.log(obj, clone);
-print();
+console.table(obj);

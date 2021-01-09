@@ -27,7 +27,7 @@ module.exports = merge(common, {
 
   plugins: [
     new HtmlWebpackPlugin({
-      filename: "htmlnodes_prototype.html",
+      filename: "html_nodes_prototype.html",
       title: "HTML Nodes",
       template: "src/apps/html_nodes_prototype/index.html",
       chunks: ["html_nodes_prototype", "vendor"],

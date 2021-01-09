@@ -5,7 +5,7 @@ module.exports = {
 
   entry: {
     html_nodes_prototype: paths.src + "/apps/html_nodes_prototype/main.js",
-    second_App: paths.src + "/apps/second_App/main.js",
+    second_app: paths.src + "/apps/second_app/main.js",
     vendor: paths.src + "/apps/_vendor/vendor.js",
   },
 

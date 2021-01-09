@@ -27,7 +27,16 @@ module.exports = merge(common, {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      filename: "htmlnodes_prototype.html",
+      title: "HTML Nodes",
+      template: "src/apps/html_nodes_prototype/index.html",
+      chunks: ["html_nodes_prototype", "vendor"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "second_app.html",
+      title: "Second app",
+      template: "src/apps/second_app/index.html",
+      chunks: ["second_app", "vendor"],
     }),
     new MiniCssExtractPlugin({
       filename: "[name]/[name].[contenthash].css",

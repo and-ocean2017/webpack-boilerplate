@@ -3,3 +3,7 @@
 /dist
 
 .*
+
+#Excluding files as this is template
+!.editorconfig
+!.eslintrc.js

@@ -8,6 +8,19 @@ module.exports = {
     },
 
     module: {
-        rules: [{ test: /\.m?js$/, use: ['babel-loader'] }],
+        rules: [
+            {
+                test: /\.m?js$/,
+                use: ['babel-loader'],
+            },
+            {
+                test: /\.(woff2|woff|ttf)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '/fonts/[name].[ext]',
+                    },
+                }],
+            }],
     },
 };

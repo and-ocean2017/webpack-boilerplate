@@ -9,8 +9,9 @@ module.exports = merge(common, {
     mode: 'development',
 
     output: {
-        filename: '[name]/[name].bundle.js',
+        filename: 'js/[name].bundle.js',
         path: paths.build,
+        publicPath: '/static',
     },
 
     module: {
@@ -19,13 +20,16 @@ module.exports = merge(common, {
                 test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
-            { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+            },
         ],
     },
 
     devServer: {
-    // To set the index html file
-    // index: "html_nodes_prototype/html_nodes_prototype.html",
+        // To set the index html file
+        // index: "html_nodes_prototype/html_nodes_prototype.html",
         historyApiFallback: true,
         contentBase: paths.build,
         open: true,
@@ -37,21 +41,21 @@ module.exports = merge(common, {
     plugins: [
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
-            filename: 'html_nodes_prototype/html_nodes_prototype.html',
+            filename: 'html/html_nodes_prototype.html',
             title: 'HTML Nodes',
             hot: true,
             template: 'src/apps/html_nodes_prototype/index.html',
             chunks: ['html_nodes_prototype', 'vendor'],
         }),
         new HtmlWebpackPlugin({
-            filename: 'second_app/second_app.html',
+            filename: 'html/second_app.html',
             title: 'Second app',
             hot: true,
             template: 'src/apps/second_app/index.html',
             chunks: ['second_app', 'vendor'],
         }),
         new MiniCssExtractPlugin({
-            filename: '[name]/[name].css',
+            filename: 'css/[name].css',
         }),
     ],
 });
